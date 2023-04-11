@@ -47,6 +47,7 @@ app.post("/", (req,res) => {
 
   let jsonData = JSON.stringify(data);
   const request = https.request(apiUrl, options, (apiResponse) => {
+      console.log(apiResponse.statusCode);
     if(apiResponse.statusCode === 200) {
         res.sendFile(__dirname + "/success.html");
         } else {
