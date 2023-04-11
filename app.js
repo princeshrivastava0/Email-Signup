@@ -24,7 +24,7 @@ app.post("/", (req,res) => {
     let lName = req.body.lastName;
     let email = req.body.email;
     const apiUrl = MAPI_SERVER + MLIST_ID;
-    console.log(apiUrl);
+    
     let options = {
         method: "post",
         auth: MAPI_KEY
@@ -53,7 +53,7 @@ app.post("/", (req,res) => {
         res.sendFile(__dirname + "/failure.html");
         }
     apiResponse.on("data", (apiData) => {
-    JSON.parse(apiData);
+    console.log(JSON.parse(apiData));
         
     })
     
