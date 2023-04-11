@@ -53,7 +53,7 @@ app.post("/", (req,res) => {
         res.sendFile(__dirname + "/failure.html");
         }
     apiResponse.on("data", (apiData) => {
-//    console.log(JSON.parse(apiData));
+    JSON.parse(apiData);
         
     })
     
