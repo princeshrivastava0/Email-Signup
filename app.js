@@ -1,11 +1,10 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 const request = require("request");
 const bodyParser = require("body-parser")
 const https = require("https");
-
-require("dotenv").config();
 const MAPI_KEY = process.env.API_KEY;
 const MLIST_ID = process.env.LIST_ID;
 const MAPI_SERVER = process.env.API_SERVER;
